@@ -749,7 +749,9 @@ app.listen(port, () => console.log(`Server is listening on port ${port}...`));
 -  eventually handle Mongoose Errors, just like in the node-express
 -  showcase with async errors
 
-#### ENV Variables✅✅✅
+#### ENV Variables
+
+✅✅✅
 
 ```sh
 npm install dotenv
@@ -765,6 +767,8 @@ npm install dotenv
 -  .env
 
 #### Connect to MongoDB
+
+✅✅✅
 
 -  switched back to PORT=5000
 -  remove Error from '/'
@@ -783,7 +787,7 @@ npm install mongoose
 -  setup as MONGO_URL in .env
 -  provide credentials and DB Name
 
-#### Auth Controller and Route Structure
+#### Auth Controller and Route Structure✅✅✅
 
 -  create <b>controllers</b>
 -  authController.js
