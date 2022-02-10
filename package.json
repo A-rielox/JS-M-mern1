@@ -1,0 +1,28 @@
+{
+   "name": "mern1",
+   "version": "1.0.0",
+   "description": "#### Track Your Job Search",
+   "main": "index.js",
+   "type": "module",
+   "scripts": {
+      "start": "nodemon server"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/A-rielox/JS-M-mern1.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/A-rielox/JS-M-mern1/issues"
+   },
+   "homepage": "https://github.com/A-rielox/JS-M-mern1#readme",
+   "devDependencies": {
+      "nodemon": "^2.0.15"
+   },
+   "dependencies": {
+      "dotenv": "^16.0.0",
+      "express": "^4.17.2"
+   }
+}
