@@ -171,6 +171,8 @@ const Component = () => {
 
 #### React Router
 
+✅✅✅
+
 -  Version 6
 -  [React Router Docs](https://reactrouter.com/docs/en/v6)
 
@@ -185,7 +187,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 ```
 
 -  Connect to browser's URL with BrowserRouter
--  Routes instead of Switch
+-  Routes instead of Switch ⭐
 
 ```js
 
@@ -222,6 +224,8 @@ return (
 
 #### Setup Pages
 
+✅✅✅
+
 -  create Error, Register, Dashboard pages
 -  basic return
 -  create index.js
@@ -233,6 +237,8 @@ return (
 -  remove temp navbar
 
 #### Error Page
+
+✅✅✅
 
 ```js
 import { Link } from 'react-router-dom';
@@ -253,6 +259,8 @@ return (
 
 #### Auto Imports
 
+✅✅✅
+
 -  use while developing
 -  only sparingly while recording
 -  better picture
@@ -261,6 +269,8 @@ return (
 -  still use them, just not all the time
 
 #### Register Page - Setup
+
+✅✅✅
 
 -  show preview in Browser and themes
 
@@ -324,6 +334,8 @@ function Register() {
 
 #### FormRow Component
 
+✅✅✅
+
 -  create FormRow.js in <b>components</b>
 -  setup import/export
 -  setup one for email and password
@@ -353,6 +365,8 @@ export default FormRow;
 
 #### Alert Component
 
+✅✅✅
+
 -  right away setup as component
 -  create Alert.js in <b>components</b>
 
@@ -375,6 +389,8 @@ values.showAlert && <Alert />;
 ```
 
 #### Toggle Member
+
+✅✅✅
 
 ```js
 const toggleMember = () => {
@@ -413,6 +429,8 @@ return (
 ```
 
 #### Global Context
+
+✅✅✅
 
 -  in src create <b>context</b> directory
 -  actions.js
@@ -477,11 +495,15 @@ const { isLoading, showAlert } = useAppContext();
 
 #### useReducer
 
+✅✅✅
+
 -  [React Tutorial](https://youtu.be/iZhV0bILFb0)
 -  useReducer vs Redux
 -  multiple reducers vs one
 
 #### Wire Up Reducer
+
+✅✅✅
 
 ```js
 reducer.js;
@@ -501,6 +523,8 @@ const [state, dispatch] = useReducer(reducer, initialState);
 ```
 
 #### Display Alert
+
+✅✅✅
 
 ```js
 actions.js;
@@ -545,10 +569,12 @@ const Alert = () => {
 
 #### Display Alert
 
+✅✅✅
+
 -  [JS Nuggets - Dynamic Object Keys](https://youtu.be/_qxCYtWm0tw)
 
 ```js
-appContext.js;
+Register.js;
 
 const handleChange = e => {
    setValues({ ...values, [e.target.name]: e.target.value });
@@ -558,7 +584,7 @@ const handleChange = e => {
 -  get displayAlert function
 
 ```js
-appContext.js;
+Register.js;
 
 const onSubmit = e => {
    e.preventDefault();
@@ -572,6 +598,8 @@ const onSubmit = e => {
 ```
 
 #### Clear Alert
+
+✅✅✅
 
 -  technically optional
 
@@ -615,7 +643,7 @@ const clearAlert = () => {
 };
 ```
 
-#### Setup Server
+#### Setup Server✅✅✅
 
 -  stop the dev server in client
 -  cd ..
