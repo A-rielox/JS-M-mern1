@@ -787,7 +787,9 @@ npm install mongoose
 -  setup as MONGO_URL in .env
 -  provide credentials and DB Name
 
-#### Auth Controller and Route Structure✅✅✅
+#### Auth Controller and Route Structure
+
+✅✅✅
 
 -  create <b>controllers</b>
 -  authController.js
@@ -819,6 +821,8 @@ app.use('/api/v1/auth', authRouter);
 
 #### Jobs Controller and Route Structure
 
+✅✅✅
+
 -  jobsController.js
 -  create async functions
 
@@ -849,12 +853,14 @@ app.use('/api/v1/jobs', jobsRouter);
 
 #### Postman
 
+✅✅✅
+
 -  URL global var
 -  JOBIFY Collection
 -  auth and jobs folders
 -  setup routes
 
-#### User Model
+#### User Model✅✅✅
 
 -  <b>models</b> folder
 -  User.js
