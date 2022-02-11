@@ -958,7 +958,9 @@ npm install http-status-codes
 -  import {BadRequestError} in authController
 -  gotcha "errors/index.js"
 
-#### Hash Passwords✅✅✅
+#### Hash Passwords
+
+✅✅✅
 
 -  one way street, only compare hashed values
 -  [bcrypt.js](https://www.npmjs.com/package/bcryptjs)
@@ -979,6 +981,7 @@ npm install bcryptjs
 
 #### Mongoose - Custom Instance Methods
 
+✅✅✅
 [Custom Instance Methods](https://mongoosejs.com/docs/guide.html#methods)
 
 -  UserSchema.methods.createJWT = function(){console.log(this)}
@@ -987,6 +990,8 @@ npm install bcryptjs
 -  invoke user.createJWT()
 
 #### JWT
+
+✅✅✅
 
 -  token
 -  [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
@@ -1012,15 +1017,19 @@ return jwt.sign({ userId: this._id }, process.env.JWT_SECRET, {
 
 #### JWT_SECRET and JWT_LIFETIME
 
+✅✅✅
+
 -  [Keys Generator](https://www.allkeysgenerator.com/)
 -  RESTART SERVER!!!!
 
 #### Complete Register
 
+✅✅✅
+
 -  password : {select:false}
 -  complete response
 
-#### Concurrently
+#### Concurrently✅✅✅
 
 -  front-end and backend (server)
 -  run separate terminals

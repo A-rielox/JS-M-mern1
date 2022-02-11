@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 import validator from 'validator'; // 🥊
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 const UserSchema = new mongoose.Schema({
    name: {
@@ -22,6 +24,7 @@ const UserSchema = new mongoose.Schema({
       type: String,
       required: [true, 'Please provide a password'],
       minlength: 6,
+      select: false, // para q no me lo devuelva al buscar user
    },
    lastName: {
       type: String,
@@ -37,7 +40,44 @@ const UserSchema = new mongoose.Schema({
    },
 });
 
+// 📑
+UserSchema.pre('save', async function () {
+   const salt = await bcrypt.genSalt(10);
+   this.password = await bcrypt.hash(this.password, salt);
+});
+
+UserSchema.methods.createJWT = function () {
+   return jwt.sign({ userId: this._id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_LIFETIME,
+   });
+};
+
+// const createTokenUser = user => {
+//    return { name: user.name, userId: user._id, role: user.role };
+// };
+//
+// const jwt = require('jsonwebtoken');
+//
+// // no es necesaria la expiración del token ya q se tiene la de la cookie
+// const createJWT = ({ payload }) => {
+//    const token = jwt.sign(payload, process.env.JWT_SECRET);
+//    return token;
+// };
+
+// UserSchema.methods.comparePassword = async function (candidatePassword) {
+//    const isMatch = await bcrypt.compare(candidatePassword, this.password);
+//    return isMatch;
+// };
+
 export default mongoose.model('User', UserSchema);
+
+//
+// 🔥
+// en los métodos "this" hace referencia al documento
+
+//
+// 📑
+// se puede omitir el "next" en funcion(next), di se devuelve una promesa
 
 //
 // 🥊 paquete para pasarle a la fcn y q me valide el mail, lo de la fcn lo sequé de la documentación. ".isEmail" es la fcn q viene en el package de "validator" para validar el email.
