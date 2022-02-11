@@ -19,7 +19,10 @@ app.use(express.json()); // para req.body
 
 // ===== routes
 app.get('/', (req, res) => {
-   res.send('Holi hola');
+   res.json({ msg: 'Holi hola' });
+});
+app.get('/api/v1', (req, res) => {
+   res.json({ msg: 'Holi hola desde API' });
 });
 
 app.use('/api/v1/auth', authRouter);

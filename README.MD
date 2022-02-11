@@ -1029,7 +1029,9 @@ return jwt.sign({ userId: this._id }, process.env.JWT_SECRET, {
 -  password : {select:false}
 -  complete response
 
-#### Concurrently✅✅✅
+#### Concurrently
+
+✅✅✅
 
 -  front-end and backend (server)
 -  run separate terminals
@@ -1057,12 +1059,14 @@ npm install concurrently --save-dev
 
 #### Cors Error
 
+✅✅✅
 [Cors Error](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
 -  two fixes (cors package and proxy)
 
 #### Cors Package
 
+✅✅✅
 [cors package](https://www.npmjs.com/package/cors)
 
 ```sh
@@ -1075,7 +1079,7 @@ import cors from 'cors';
 app.use(cors());
 ```
 
-#### Proxy
+#### Proxy✅✅✅
 
 -  access from anywhere
 -  don't want to use full url
