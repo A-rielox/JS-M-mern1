@@ -860,7 +860,9 @@ app.use('/api/v1/jobs', jobsRouter);
 -  auth and jobs folders
 -  setup routes
 
-#### User Model✅✅✅
+#### User Model
+
+✅✅✅
 
 -  <b>models</b> folder
 -  User.js
@@ -868,7 +870,7 @@ app.use('/api/v1/jobs', jobsRouter);
 -  name, email, password, lastName, location
 -  all {type:String}
 
-#### Validate Email
+#### Validate Email✅✅✅
 
 ```js
 validate:{
