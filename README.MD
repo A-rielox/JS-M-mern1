@@ -924,7 +924,9 @@ npm install express-async-errors
 
 -  use throw Error('error') instead of next(error)
 
-#### Http Status Codes ✅✅✅
+#### Http Status Codes
+
+✅✅✅
 
 -  constants for status codes
 -  personal preference
@@ -943,7 +945,11 @@ npm install http-status-codes
 
 #### Custom Errors
 
+✅✅✅
+
 #### Refactor Errors
+
+✅✅✅
 
 -  create errors folder
 -  create custom-api, bad-request, not-found, index.js files
@@ -952,7 +958,7 @@ npm install http-status-codes
 -  import {BadRequestError} in authController
 -  gotcha "errors/index.js"
 
-#### Hash Passwords
+#### Hash Passwords✅✅✅
 
 -  one way street, only compare hashed values
 -  [bcrypt.js](https://www.npmjs.com/package/bcryptjs)
