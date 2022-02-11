@@ -870,7 +870,9 @@ app.use('/api/v1/jobs', jobsRouter);
 -  name, email, password, lastName, location
 -  all {type:String}
 
-#### Validate Email✅✅✅
+#### Validate Email
+
+✅✅✅
 
 ```js
 validate:{
@@ -890,6 +892,8 @@ npm install validator
 
 #### Register User - Initial Setup
 
+✅✅✅
+
 -  authController
 -  import User model
 -  setup temporary try/catch
@@ -899,9 +903,13 @@ npm install validator
 
 #### Pass Error to Error Handler
 
+✅✅✅
+
 -  next(error)
 
 #### Express-Async-Errors Package
+
+✅✅✅
 
 -  remove try/catch
 -  [Express-Async-Errors](https://www.npmjs.com/package/express-async-errors)
@@ -916,7 +924,7 @@ npm install express-async-errors
 
 -  use throw Error('error') instead of next(error)
 
-#### Http Status Codes
+#### Http Status Codes ✅✅✅
 
 -  constants for status codes
 -  personal preference
