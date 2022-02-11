@@ -1079,7 +1079,9 @@ import cors from 'cors';
 app.use(cors());
 ```
 
-#### Proxy✅✅✅
+#### Proxy
+
+✅✅✅
 
 -  access from anywhere
 -  don't want to use full url
@@ -1094,6 +1096,8 @@ app.use(cors());
 -  restart app
 
 #### Register User - Setup
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -1136,6 +1140,8 @@ return (
 
 #### Axios
 
+✅✅✅
+
 -  [axios docs](https://axios-http.com/docs/intro)
 -  stop app
 -  cd client
@@ -1147,7 +1153,7 @@ npm install axios
 -  cd ..
 -  restart app
 
-#### Register User - Complete
+#### Register User - Complete✅✅✅
 
 ```js
 appContext.js;
