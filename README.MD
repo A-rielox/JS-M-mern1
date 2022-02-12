@@ -1721,7 +1721,9 @@ export default Navbar
 
 ```
 
-#### Navbar Setup✅✅✅
+#### Navbar Setup
+
+✅✅✅
 
 ```js
 Navbar.js;
@@ -1775,6 +1777,8 @@ export default Navbar;
 
 #### Toggle Sidebar
 
+✅✅✅
+
 ```js
 actions.js;
 
@@ -1817,6 +1821,8 @@ return (
 
 #### Toggle Dropdown
 
+✅✅✅
+
 ```js
 Navbar.js
 
@@ -1837,7 +1843,7 @@ const [showLogout, setShowLogout] = useState(false)
 
 ```
 
-#### Logout User
+#### Logout User✅✅✅
 
 ```js
 actions.js;
