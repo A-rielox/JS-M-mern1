@@ -1286,7 +1286,9 @@ const initialState = {
 };
 ```
 
-#### Morgan Package✅✅✅
+#### Morgan Package
+
+✅✅✅
 
 -  http logger middleware for node.js
 -  [morgan docs](https://www.npmjs.com/package/morgan)
@@ -1305,6 +1307,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 #### UnauthenticatedError
 
+✅✅✅
+
 -  unauthenticated.js in errors
 -  import/export
 
@@ -1321,6 +1325,8 @@ class UnauthenticatedError extends CustomAPIError {
 ```
 
 #### Compare Password
+
+✅✅✅
 
 ```js
 User.js in models;
@@ -1357,6 +1363,8 @@ const login = async (req, res) => {
 
 #### Login User - Setup
 
+✅✅✅
+
 -  actions.js LOGIN_USER_BEGIN,SUCCESS,ERROR
 -  import reducer,appContext
 
@@ -1380,6 +1388,8 @@ if (isMember) {
 ```
 
 #### Login User - Complete
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -1438,7 +1448,7 @@ if (action.type === LOGIN_USER_ERROR) {
 }
 ```
 
-#### Refactor
+#### Refactor✅✅✅
 
 ```js
 actions.js;

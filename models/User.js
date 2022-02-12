@@ -52,6 +52,11 @@ UserSchema.methods.createJWT = function () {
    });
 };
 
+UserSchema.methods.comparePassword = async function (candidatePassword) {
+   const isMatch = await bcrypt.compare(candidatePassword, this.password);
+   return isMatch;
+};
+
 // const createTokenUser = user => {
 //    return { name: user.name, userId: user._id, role: user.role };
 // };
@@ -62,11 +67,6 @@ UserSchema.methods.createJWT = function () {
 // const createJWT = ({ payload }) => {
 //    const token = jwt.sign(payload, process.env.JWT_SECRET);
 //    return token;
-// };
-
-// UserSchema.methods.comparePassword = async function (candidatePassword) {
-//    const isMatch = await bcrypt.compare(candidatePassword, this.password);
-//    return isMatch;
 // };
 
 export default mongoose.model('User', UserSchema);
