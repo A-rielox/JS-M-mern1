@@ -1153,7 +1153,9 @@ npm install axios
 -  cd ..
 -  restart app
 
-#### Register User - Complete✅✅✅
+#### Register User - Complete
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -1223,6 +1225,8 @@ if (action.type === REGISTER_USER_ERROR) {
 
 #### Navigate To Dashboard
 
+✅✅✅
+
 ```js
 Register.js;
 import { useEffect } from 'react';
@@ -1243,6 +1247,8 @@ const Register = () => {
 ```
 
 #### Local Storage
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -1280,7 +1286,7 @@ const initialState = {
 };
 ```
 
-#### Morgan Package
+#### Morgan Package✅✅✅
 
 -  http logger middleware for node.js
 -  [morgan docs](https://www.npmjs.com/package/morgan)
