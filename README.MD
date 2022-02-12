@@ -1546,6 +1546,8 @@ const onSubmit = e => {
 
 #### Dashboard pages
 
+✅✅✅
+
 -  delete Dashboard.js
 -  fix imports/exports
 -  replace in home route
@@ -1567,6 +1569,8 @@ return <h1>Add Job Page</h1>;
 
 #### Nested Structure
 
+✅✅✅
+
 ```js
 App.js
 
@@ -1579,6 +1583,8 @@ App.js
 ```
 
 #### Shared Layout
+
+✅✅✅
 
 ```js
 App.js
@@ -1615,9 +1621,13 @@ App.js
 
 #### Protected Route
 
+✅✅✅
+
 -  create ProtectedRoute.js in pages
 -  import/export
 -  wrap SharedLayout in App.js
+
+en app.js
 
 ```js
 <Route
@@ -1645,7 +1655,7 @@ const ProtectedRoute = ({ children }) => {
 };
 ```
 
-#### Navbar, SmallSidebar, BigSidebar
+#### Navbar, SmallSidebar, BigSidebar✅✅✅
 
 -  create Navbar, SmallSidebar, BigSidebar in components
 -  import Wrappers from assets/wrappers

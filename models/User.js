@@ -57,18 +57,6 @@ UserSchema.methods.comparePassword = async function (candidatePassword) {
    return isMatch;
 };
 
-// const createTokenUser = user => {
-//    return { name: user.name, userId: user._id, role: user.role };
-// };
-//
-// const jwt = require('jsonwebtoken');
-//
-// // no es necesaria la expiración del token ya q se tiene la de la cookie
-// const createJWT = ({ payload }) => {
-//    const token = jwt.sign(payload, process.env.JWT_SECRET);
-//    return token;
-// };
-
 export default mongoose.model('User', UserSchema);
 
 //

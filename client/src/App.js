@@ -1,23 +1,42 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Landing, Dashboard, Register, Error } from './pages';
+import { Landing, Register, Error, ProtectedRoute } from './pages';
+import {
+   SharedLayout,
+   Stats,
+   AllJobs,
+   AddJob,
+   Profile,
+} from './pages/dashboard';
 
 function App() {
    return (
       <BrowserRouter>
-         <nav>
-            <Link to="/">Dashboard</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/landing">Landing</Link>
-         </nav>
-
          <Routes>
-            <Route path="/" element={<Dashboard />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/landing" element={<Landing />}></Route>
-            <Route path="*" element={<Error />}></Route>
+            <Route
+               path="/"
+               element={
+                  <ProtectedRoute>
+                     <SharedLayout />
+                  </ProtectedRoute>
+               }
+            >
+               <Route index element={<Stats />} />
+               <Route path="all-jobs" element={<AllJobs />} />
+               <Route path="add-job" element={<AddJob />} />
+               <Route path="profile" element={<Profile />} />
+            </Route>
+
+            <Route path="/register" element={<Register />} />
+            <Route path="/landing" element={<Landing />} />
+            <Route path="*" element={<Error />} />
          </Routes>
       </BrowserRouter>
    );
 }
 
 export default App;
+
+// el index en
+// <Route index element={<Stats />} />
+// es para q agarre esta al cargar el parent q es:
+// <Route path="/"
