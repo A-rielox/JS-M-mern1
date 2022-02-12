@@ -1655,7 +1655,9 @@ const ProtectedRoute = ({ children }) => {
 };
 ```
 
-#### Navbar, SmallSidebar, BigSidebar✅✅✅
+#### Navbar, SmallSidebar, BigSidebar
+
+✅✅✅
 
 -  create Navbar, SmallSidebar, BigSidebar in components
 -  import Wrappers from assets/wrappers
@@ -1694,6 +1696,7 @@ export default SharedLayout;
 
 #### React Icons
 
+✅✅✅
 [React Icons](https://react-icons.github.io/react-icons/)
 
 ```sh
@@ -1718,7 +1721,7 @@ export default Navbar
 
 ```
 
-#### Navbar Setup
+#### Navbar Setup✅✅✅
 
 ```js
 Navbar.js;

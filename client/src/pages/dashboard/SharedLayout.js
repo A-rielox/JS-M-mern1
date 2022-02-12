@@ -1,16 +1,25 @@
-import { Outlet, Link } from 'react-router-dom';
+import { useAppContext } from '../../context/appContext';
+import { Outlet } from 'react-router-dom';
+import { Navbar, SmallSidebar, BigSidebar } from '../../components';
 import styled from 'styled-components';
 
 const SharedLayout = () => {
+   const { user } = useAppContext();
+
    return (
       <Wrapper>
-         <nav>
-            <Link to="all-jobs">all jobs</Link>
-            <Link to="add-job">add job</Link>
-         </nav>
+         <main className="dashboard">
+            <SmallSidebar />
+            <BigSidebar />
 
-         {/* donde se ponen las nested pages */}
-         <Outlet />
+            <div>
+               <Navbar />
+
+               <div className="dashboard-page">
+                  <Outlet />
+               </div>
+            </div>
+         </main>
       </Wrapper>
    );
 };
