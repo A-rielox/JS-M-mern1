@@ -1843,7 +1843,9 @@ const [showLogout, setShowLogout] = useState(false)
 
 ```
 
-#### Logout User✅✅✅
+#### Logout User
+
+✅✅✅
 
 ```js
 actions.js;
@@ -1905,6 +1907,8 @@ return (
 
 #### Setup Links
 
+✅✅✅
+
 -  create <b>utils</b>in the <b>src</b>
 -  setup links.js
 
@@ -1945,6 +1949,8 @@ export default links;
 ```
 
 #### Small Sidebar - Setup
+
+✅✅✅
 
 ```js
 SmallSidebar.js;
@@ -2012,6 +2018,8 @@ return (
 
 #### Small Sidebar - Nav Links
 
+✅✅✅
+
 ```js
 SmallSidebar.js;
 
@@ -2040,7 +2048,7 @@ return (
 );
 ```
 
-#### Nav Links Component
+#### Nav Links Component✅✅✅
 
 -  in <b>components</b> create NavLinks.js
 -  styles still set from Wrapper

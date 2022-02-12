@@ -33,7 +33,11 @@ const Navbar = () => {
                <div
                   className={`dropdown ${showLogout ? 'show-dropdown' : null} `}
                >
-                  <button onClick={logoutUser} className="dropdown-btn">
+                  <button
+                     onClick={logoutUser}
+                     type="button"
+                     className="dropdown-btn"
+                  >
                      logout
                   </button>
                </div>

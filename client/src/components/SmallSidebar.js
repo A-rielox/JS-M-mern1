@@ -1,9 +1,50 @@
 import styled from 'styled-components';
+import { FaTimes } from 'react-icons/fa';
+import { useAppContext } from '../context/appContext';
+import links from '../utils/links';
+import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 const SmallSidebar = () => {
+   const { showSidebar, toggleSidebar } = useAppContext();
+
    return (
       <Wrapper>
-         <h4>small sidebar</h4>
+         <div
+            className={`sidebar-container ${
+               showSidebar ? 'show-sidebar' : null
+            }`}
+         >
+            <div className="content">
+               <button className="close-btn" onClick={toggleSidebar}>
+                  <FaTimes />
+               </button>
+
+               <header>
+                  <Logo />
+               </header>
+
+               <div className="nav-links">
+                  {links.map(link => {
+                     const { id, text, path, icon } = link;
+
+                     return (
+                        <NavLink
+                           key={id}
+                           to={path}
+                           className={({ isActive }) =>
+                              isActive ? 'nav-link active' : 'nav-link'
+                           }
+                           onClick={toggleSidebar}
+                        >
+                           <span className="icon">{icon}</span>
+                           {text}
+                        </NavLink>
+                     );
+                  })}
+               </div>
+            </div>
+         </div>
       </Wrapper>
    );
 };
