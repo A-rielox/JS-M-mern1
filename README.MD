@@ -2239,7 +2239,9 @@ const auth = async (req, res, next) => {
 };
 ```
 
-#### Auth Middleware✅✅✅
+#### Auth Middleware
+
+✅✅✅
 
 ```js
 import jwt from 'jsonwebtoken';
@@ -2269,6 +2271,8 @@ export default auth;
 ```
 
 #### Update User
+
+✅✅✅
 
 ```js
 const updateUser = async (req, res) => {
@@ -2301,6 +2305,8 @@ const updateUser = async (req, res) => {
 
 #### Modified Paths
 
+✅✅✅
+
 -  user.save() vs User.findOneAndUpdate
 
 ```js
@@ -2316,7 +2322,7 @@ UserSchema.pre('save', async function () {
 });
 ```
 
-#### Profile Page
+#### Profile Page✅✅✅
 
 ```js
 appContext.js

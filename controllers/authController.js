@@ -56,8 +56,27 @@ const login = async (req, res) => {
 };
 
 const updateUser = async (req, res) => {
-   console.log(req.user);
-   res.send('update user route de jobify');
+   const { email, name, lastName, location } = req.body;
+   if (!email || !name || !lastName || !location) {
+      throw new BadRequestError('Please provide all required fields');
+   }
+
+   const user = await User.findOne({ _id: req.user.userId });
+
+   user.email = email;
+   user.name = name;
+   user.lastName = lastName;
+   user.location = location;
+
+   await user.save(); // va a intentar hashiar un pass q no le estoy pasando
+
+   const token = await user.createJWT(); // tecnicamente no cambio el id, asi q no necesito cambiar el token
+
+   res.status(StatusCodes.OK).json({
+      user,
+      token,
+      location: user.location,
+   });
 };
 
 export { register, login, updateUser };
