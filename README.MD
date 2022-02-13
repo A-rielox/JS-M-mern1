@@ -2048,7 +2048,9 @@ return (
 );
 ```
 
-#### Nav Links Component✅✅✅
+#### Nav Links Component
+
+✅✅✅
 
 -  in <b>components</b> create NavLinks.js
 -  styles still set from Wrapper
@@ -2095,6 +2097,8 @@ return <NavLinks toggleSidebar={toggleSidebar}>
 
 #### Big Sidebar
 
+✅✅✅
+
 ```js
 import { useAppContext } from '../context/appContext';
 import NavLinks from './NavLinks';
@@ -2127,6 +2131,8 @@ export default BigSidebar;
 ```
 
 #### Authenticate User Setup
+
+✅✅✅
 
 -  create auth.js in <b>middleware</b>
 
@@ -2166,7 +2172,7 @@ import authenticateUser from './middleware/auth.js';
 router.route('/stats').get(authenticateUser, showStats);
 ```
 
-#### Auth - Bearer Schema
+#### Auth - Bearer Schema✅✅✅
 
 ```js
 Postman
