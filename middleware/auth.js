@@ -1,5 +1,8 @@
 const auth = async (req, res, next) => {
-   console.log('authenticate user');
+   const headers = req.headers;
+   const authHeader = req.headers.authorization; // aquí debe venir el "Bearer <token>"
+   console.log(headers);
+   console.log(authHeader);
    next();
 };
 

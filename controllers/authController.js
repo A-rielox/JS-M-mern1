@@ -16,6 +16,7 @@ const register = async (req, res) => {
 
    const user = await User.create({ name, email, password });
 
+   // en el payload del token { userId: this._id }
    const token = user.createJWT();
 
    res.status(StatusCodes.CREATED).json({
@@ -47,9 +48,10 @@ const login = async (req, res) => {
       throw new UnauthenticatedError('Invalid Credentials');
    }
 
+   // en el payload del token { userId: this._id }
    const token = await user.createJWT();
 
-   user.password = undefined;
+   user.password = undefined; //para no mandar el pass al front
    res.status(StatusCodes.OK).json({ user, token, location: user.location });
 };
 

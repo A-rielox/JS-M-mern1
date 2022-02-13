@@ -2172,7 +2172,9 @@ import authenticateUser from './middleware/auth.js';
 router.route('/stats').get(authenticateUser, showStats);
 ```
 
-#### Auth - Bearer Schema✅✅✅
+#### Auth - Bearer Schema
+
+✅✅✅
 
 ```js
 Postman
@@ -2195,7 +2197,7 @@ const auth = async (req, res, next) => {
 };
 ```
 
-#### Postman - Set Token Programmatically
+#### Postman - Set Token Programmatically✅✅✅
 
 -  register and login routes
 -  Tests
