@@ -35,6 +35,9 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
    const [state, dispatch] = useReducer(reducer, initialState);
 
+   // ⭐⭐ config para axios
+   axios.defaults.headers.common['Authorization'] = `Bearer ${state.token}`;
+
    const displayAlert = () => {
       dispatch({ type: DISPLAY_ALERT });
       clearAlert();
@@ -117,6 +120,20 @@ const AppProvider = ({ children }) => {
       removeUserFromLocalStorage();
    };
 
+   const updateUser = async currentUser => {
+      try {
+         // ⭐⭐
+         const { data } = await axios.patch(
+            '/api/v1/auth/updateUser',
+            currentUser
+         );
+
+         console.log(data);
+      } catch (error) {
+         console.log(error);
+      }
+   };
+
    return (
       <AppContext.Provider
          value={{
@@ -126,6 +143,7 @@ const AppProvider = ({ children }) => {
             loginUser,
             toggleSidebar,
             logoutUser,
+            updateUser,
          }}
       >
          {children}
@@ -138,3 +156,16 @@ export const useAppContext = () => {
 };
 
 export { AppProvider };
+
+// ⭐⭐ config para axios
+// axios.dafaults.headers.common['Authorization'] = `Bearer ${state.token}`;
+// para no tener q repetir en todos el tercer parametro de la config
+// const { data } = await axios.patch(
+//    '/api/v1/auth/updateUser',
+//    currentUser,
+//    {
+//       headers: {
+//          Authorization: `Bearer ${state.token}`,
+//       },
+//    }
+// );

@@ -14,6 +14,7 @@ const initialState = {
 const Register = () => {
    const { isLoading, showAlert, displayAlert, registerUser, user, loginUser } =
       useAppContext();
+
    const [values, setValues] = useState(initialState);
    const navigate = useNavigate();
 

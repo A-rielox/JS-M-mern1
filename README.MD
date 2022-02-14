@@ -2322,7 +2322,9 @@ UserSchema.pre('save', async function () {
 });
 ```
 
-#### Profile Page✅✅✅
+#### Profile Page
+
+✅✅✅
 
 ```js
 appContext.js
@@ -2412,6 +2414,8 @@ export default Profile;
 
 #### Bearer Token - Manual Approach
 
+✅✅✅
+
 ```js
 appContext.js;
 
@@ -2433,7 +2437,7 @@ const updaterUser = async currentUser => {
 };
 ```
 
-#### Axios - Global Setup
+#### Axios - Global Setup✅✅✅
 
 ```js
 appContext.js;
