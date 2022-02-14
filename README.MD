@@ -2572,7 +2572,9 @@ if (action.type === UPDATE_USER_ERROR) {
 }
 ```
 
-#### 401 Error - Logout User✅✅✅
+#### 401 Error - Logout User
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -2616,6 +2618,8 @@ const updateUser = async currentUser => {
 ```
 
 #### Job Model
+
+✅✅✅
 
 -  Job Model
 
@@ -2666,6 +2670,8 @@ export default mongoose.model('Job', JobSchema);
 
 #### Create Job
 
+✅✅✅
+
 ```js
 jobsController.js;
 
@@ -2687,7 +2693,7 @@ const createJob = async (req, res) => {
 };
 ```
 
-#### Job State Values
+#### Job State Values✅✅✅✅✅✅
 
 ```js
 appContext.js;
