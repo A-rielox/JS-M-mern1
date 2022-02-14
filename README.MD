@@ -2693,7 +2693,9 @@ const createJob = async (req, res) => {
 };
 ```
 
-#### Job State Values✅✅✅✅✅✅
+#### Job State Values
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -2711,6 +2713,8 @@ const initialState = {
 ```
 
 #### AddJob Page - Setup
+
+✅✅✅
 
 ```js
 import { FormRow, Alert } from '../../components';
@@ -2799,6 +2803,8 @@ export default AddJob;
 
 #### Select Input
 
+✅✅✅
+
 ```js
 return (
    // job type
@@ -2826,6 +2832,8 @@ return (
 ```
 
 #### FormRowSelect
+
+✅✅✅
 
 -  create FormRowSelect in components
 -  setup import/export
@@ -2885,7 +2893,7 @@ return (
 );
 ```
 
-#### Change State Values With Handle Change
+#### Change State Values With Handle Change✅✅✅✅✅✅
 
 -  [JS Nuggets Dynamic Object Keys](https://youtu.be/_qxCYtWm0tw)
 

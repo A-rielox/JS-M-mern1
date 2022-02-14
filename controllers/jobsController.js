@@ -15,7 +15,7 @@ const createJob = async (req, res) => {
 
    res.status(StatusCodes.CREATED).json({ job });
 
-   // el req.user se crea en authenticateUser from './middleware/auth.js
+   // el req.user se crea en authenticateUser from './middleware/auth.js'
 };
 
 const deleteJob = async (req, res) => {
