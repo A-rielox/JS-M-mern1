@@ -2504,7 +2504,9 @@ authFetch.interceptors.response.use(
 );
 ```
 
-#### Update User✅✅✅
+#### Update User
+
+✅✅✅
 
 ```js
 actions.js;
@@ -2570,7 +2572,7 @@ if (action.type === UPDATE_USER_ERROR) {
 }
 ```
 
-#### 401 Error - Logout User
+#### 401 Error - Logout User✅✅✅
 
 ```js
 appContext.js;

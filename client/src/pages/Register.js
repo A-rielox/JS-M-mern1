@@ -50,8 +50,6 @@ const Register = () => {
       }
    };
 
-   console.log(values);
-
    useEffect(() => {
       if (user) {
          setTimeout(() => {
