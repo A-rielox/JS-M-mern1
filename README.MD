@@ -2437,7 +2437,9 @@ const updaterUser = async currentUser => {
 };
 ```
 
-#### Axios - Global Setup✅✅✅
+#### Axios - Global Setup
+
+✅✅✅
 
 ```js
 appContext.js;
@@ -2446,6 +2448,8 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${state.token}`;
 ```
 
 #### Axios - Setup Instance
+
+✅✅✅
 
 ```js
 AppContext.js;
@@ -2467,6 +2471,8 @@ const updaterUser = async currentUser => {
 ```
 
 #### Axios - Interceptors
+
+✅✅✅
 
 -  will use instance, but can use axios instead
 
@@ -2498,7 +2504,7 @@ authFetch.interceptors.response.use(
 );
 ```
 
-#### Update User
+#### Update User✅✅✅
 
 ```js
 actions.js;
