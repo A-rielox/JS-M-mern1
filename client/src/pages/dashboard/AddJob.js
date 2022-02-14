@@ -5,6 +5,7 @@ import styled from 'styled-components';
 // los valores los pongo en el global ( y no en la pura pag como en el register ) xq para editar y agregar job voy a ocupar la misma pag
 const AddJob = () => {
    const {
+      isLoading,
       isEditing,
       showAlert,
       displayAlert,
@@ -16,6 +17,8 @@ const AddJob = () => {
       status,
       statusOptions,
       handleChange,
+      clearValues,
+      createJob,
    } = useAppContext();
 
    const handleJobInput = e => {
@@ -34,7 +37,13 @@ const AddJob = () => {
          displayAlert();
          return;
       }
-      console.log('create job');
+
+      if (isEditing) {
+         // despues va a ir editJob
+         return;
+      }
+
+      createJob();
    };
 
    return (
@@ -89,8 +98,20 @@ const AddJob = () => {
                      className="btn btn-block submit-btn"
                      type="submit"
                      onClick={handleSubmit}
+                     disabled={isLoading}
                   >
                      submit
+                  </button>
+
+                  {/* este tiene q ir despues del submit button  */}
+                  <button
+                     className="btn btn-block clear-btn"
+                     onClick={e => {
+                        e.preventDefault();
+                        clearValues();
+                     }}
+                  >
+                     clear
                   </button>
                </div>
             </div>

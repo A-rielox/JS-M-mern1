@@ -2893,7 +2893,9 @@ return (
 );
 ```
 
-#### Change State Values With Handle Change✅✅✅✅✅✅
+#### Change State Values With Handle Change
+
+✅✅✅
 
 -  [JS Nuggets Dynamic Object Keys](https://youtu.be/_qxCYtWm0tw)
 
@@ -2935,6 +2937,8 @@ const handleJobInput = e => {
 ```
 
 #### Clear Values
+
+✅✅✅
 
 ```js
 actions.js;
@@ -2992,6 +2996,8 @@ return (
 ```
 
 #### Create Job
+
+✅✅✅
 
 ```js
 actions.js;
@@ -3079,7 +3085,7 @@ if (action.type === CREATE_JOB_ERROR) {
 }
 ```
 
-#### Get All Jobs
+#### Get All Jobs✅✅✅
 
 ```js
 jobsController.js;

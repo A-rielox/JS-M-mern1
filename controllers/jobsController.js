@@ -15,7 +15,7 @@ const createJob = async (req, res) => {
 
    res.status(StatusCodes.CREATED).json({ job });
 
-   // el req.user se crea en authenticateUser from './middleware/auth.js'
+   // el req.user se crea en authenticateUser from './middleware/auth.js' .
 };
 
 const deleteJob = async (req, res) => {
@@ -23,7 +23,13 @@ const deleteJob = async (req, res) => {
 };
 
 const getAllJobs = async (req, res) => {
-   res.send('get all jobbbbbs');
+   const jobs = await Job.find({ createdBy: req.user.userId });
+
+   res.status(StatusCodes.OK).json({
+      totalJobs: jobs.length,
+      numOfPages: 1,
+      jobs,
+   });
 };
 
 const updateJob = async (req, res) => {
