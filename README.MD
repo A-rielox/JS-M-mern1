@@ -3085,7 +3085,9 @@ if (action.type === CREATE_JOB_ERROR) {
 }
 ```
 
-#### Get All Jobs✅✅✅
+#### Get All Jobs
+
+✅✅✅
 
 ```js
 jobsController.js;
@@ -3103,6 +3105,8 @@ const getAllJobs = async (req, res) => {
 
 #### Jobs State Values
 
+✅✅✅
+
 ```js
 appContext.js;
 
@@ -3115,6 +3119,8 @@ const initialState = {
 ```
 
 #### Get All Jobs Request
+
+✅✅✅
 
 ```js
 actions.js;
@@ -3174,7 +3180,7 @@ if (action.type === GET_JOBS_SUCCESS) {
 }
 ```
 
-#### AllJobs Page Setup
+#### AllJobs Page Setup✅✅✅
 
 -  create
 -  SearchContainer export
