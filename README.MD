@@ -3180,7 +3180,9 @@ if (action.type === GET_JOBS_SUCCESS) {
 }
 ```
 
-#### AllJobs Page Setup✅✅✅
+#### AllJobs Page Setup
+
+✅✅✅
 
 -  create
 -  SearchContainer export
@@ -3291,6 +3293,8 @@ export default Job;
 
 #### Job Component - Setup
 
+✅✅✅
+
 ```js
 appContext.js
 
@@ -3363,7 +3367,7 @@ const Job = ({
 export default Job;
 ```
 
-#### JobInfo
+#### JobInfo✅✅✅
 
 ```js
 JobInfo.js;
