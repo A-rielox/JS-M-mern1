@@ -3367,7 +3367,9 @@ const Job = ({
 export default Job;
 ```
 
-#### JobInfo✅✅✅
+#### JobInfo
+
+✅✅✅
 
 ```js
 JobInfo.js;
@@ -3401,7 +3403,7 @@ return (
 );
 ```
 
-#### SetEditJob
+#### SetEditJob✅✅✅✅✅✅
 
 ```js
 actions.js;
