@@ -3461,7 +3461,9 @@ const handleSubmit = e => {
 };
 ```
 
-#### Edit Job - Server✅✅✅
+#### Edit Job - Server
+
+✅✅✅
 
 ```js
 jobsController.js;
@@ -3493,6 +3495,8 @@ const updateJob = async (req, res) => {
 ```
 
 #### Alternative Approach
+
+✅✅✅
 
 -  optional
 -  multiple approaches
@@ -3528,6 +3532,8 @@ const updateJob = async (req, res) => {
 ```
 
 #### Check Permissions
+
+✅✅✅
 
 ```js
 jobsController.js;
@@ -3570,12 +3576,13 @@ const updateJob = async (req, res) => {
 ```js
 checkPermissions.js;
 
-import { UnAuthorizedError } from '../errors/index.js';
+import { UnauthenticatedError } from '../errors/index.js';
 
+//se pasa todo el user (requestUser) xq tengo q checar si es q es admin, para q tambien sea capaz de editar el job aun cuando no lo haya creado él
 const checkPermissions = (requestUser, resourceUserId) => {
    // if (requestUser.role === 'admin') return
    if (requestUser.userId === resourceUserId.toString()) return;
-   throw new CustomError.UnauthorizedError(
+   throw new CustomError.UnauthenticatedError(
       'Not authorized to access this route'
    );
 };
@@ -3583,7 +3590,7 @@ const checkPermissions = (requestUser, resourceUserId) => {
 export default checkPermissions;
 ```
 
-#### Remove/Delete Job
+#### Remove/Delete Job✅✅✅
 
 ```js
 jobsController.js;
