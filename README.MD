@@ -3590,7 +3590,9 @@ const checkPermissions = (requestUser, resourceUserId) => {
 export default checkPermissions;
 ```
 
-#### Remove/Delete Job✅✅✅
+#### Remove/Delete Job
+
+✅✅✅
 
 ```js
 jobsController.js;
@@ -3612,6 +3614,8 @@ const deleteJob = async (req, res) => {
 ```
 
 #### Delete Job - Front-End
+
+✅✅✅
 
 ```js
 actions.js;
@@ -3641,7 +3645,7 @@ if (action.type === DELETE_JOB_BEGIN) {
 }
 ```
 
-#### Edit Job - Front-End
+#### Edit Job - Front-End✅✅✅✅✅✅
 
 ```js
 actions.js;
