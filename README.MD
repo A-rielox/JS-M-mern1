@@ -3645,7 +3645,9 @@ if (action.type === DELETE_JOB_BEGIN) {
 }
 ```
 
-#### Edit Job - Front-End✅✅✅✅✅✅
+#### Edit Job - Front-End
+
+✅✅✅
 
 ```js
 actions.js;
@@ -3716,6 +3718,8 @@ if (action.type === EDIT_JOB_ERROR) {
 
 #### Populate Database
 
+✅✅✅
+
 -  create populate.js in the root
 
 ```js
@@ -3751,6 +3755,8 @@ start();
 
 #### Show Stats - Structure
 
+✅✅✅
+
 -  aggregation pipeline
 -  step by step
 -  [Aggregation Pipeline](https://docs.mongodb.com/manual/core/aggregation-pipeline/)
@@ -3771,6 +3777,8 @@ const showStats = async (req, res) => {
 ```
 
 #### Show Stats - Object Setup
+
+✅✅✅
 
 -  [Reduce Basics](https://youtu.be/3WkW9nrS2mw)
 -  [Reduce Object Example ](https://youtu.be/5BFkp8JjLEY)
@@ -3794,7 +3802,7 @@ const showStats = async (req, res) => {
 };
 ```
 
-#### Show Stats - Default Stats
+#### Show Stats - Default Stats✅✅✅
 
 ```js
 jobsController.js;
