@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const AddJob = () => {
    const {
       isLoading,
-      isEditing,
       showAlert,
       displayAlert,
       position,
@@ -19,6 +18,8 @@ const AddJob = () => {
       handleChange,
       clearValues,
       createJob,
+      isEditing,
+      editJob,
    } = useAppContext();
 
    const handleJobInput = e => {
@@ -39,7 +40,7 @@ const AddJob = () => {
       }
 
       if (isEditing) {
-         // despues va a ir editJob
+         editJob();
          return;
       }
 
