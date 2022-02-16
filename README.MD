@@ -3802,7 +3802,9 @@ const showStats = async (req, res) => {
 };
 ```
 
-#### Show Stats - Default Stats✅✅✅
+#### Show Stats - Default Stats
+
+✅✅✅
 
 ```js
 jobsController.js;
@@ -3829,6 +3831,8 @@ const showStats = async (req, res) => {
 ```
 
 #### Show Stats - Function Setup
+
+✅✅✅
 
 ```js
 actions.js;
@@ -3884,12 +3888,14 @@ if (action.type === SHOW_STATS_SUCCESS) {
 
 #### Stats Page - Structure
 
+✅✅✅
+
 -  components
 -  StatsContainer.js
 -  ChartsContainer.js
 -  StatsItem.js
 -  simple return
--  import/export index.js
+-  import/export index.js (StatsContainer.js,ChartsContainer.js)
 
 ```js
 Stats.js;
@@ -3920,6 +3926,8 @@ export default Stats;
 ```
 
 #### StatsContainer
+
+✅✅✅
 
 ```js
 StatsContainer.js;
@@ -3968,6 +3976,8 @@ export default StatsContainer;
 
 #### StatItem
 
+✅✅✅
+
 ```js
 StatItem.js;
 
@@ -3988,7 +3998,7 @@ function StatItem({ count, title, icon, color, bcg }) {
 export default StatItem;
 ```
 
-#### Aggregate Jobs Based on Year and Month
+#### Aggregate Jobs Based on Year and Month✅✅✅✅✅✅
 
 ```js
 jobsController.js;

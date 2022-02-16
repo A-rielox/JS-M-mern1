@@ -84,6 +84,9 @@ const showStats = async (req, res) => {
       { $group: { _id: '$status', count: { $sum: 1 } } },
    ]);
 
+   // console.log(stats);
+   //  [{ _id: 'pending', count: 37 },{ _id: 'declined', count: 46 },{ _id: 'interview', count: 37 }]
+
    // solo para cambiar el formato del object
    stats = stats.reduce((acc, curr) => {
       const { _id: title, count } = curr;
@@ -91,6 +94,9 @@ const showStats = async (req, res) => {
 
       return acc;
    }, {});
+
+   // console.log(stats);
+   //  { pending: 37, declined: 46, interview: 37 }
 
    const defaultStats = {
       pending: stats.pending || 0,
