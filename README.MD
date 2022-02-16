@@ -4530,7 +4530,9 @@ if (action.type === CLEAR_FILTERS) {
 }
 ```
 
-#### Refactor Get All Jobs✅✅✅✅✅✅
+#### Refactor Get All Jobs
+
+✅✅✅✅✅✅
 
 ```js
 const getJobs = async () => {
@@ -4582,6 +4584,8 @@ const JobsContainer = () => {
 ```
 
 #### Limit and Skip
+
+✅✅✅✅✅✅
 
 ```js
 jobsController.js;
@@ -4635,6 +4639,8 @@ const getAllJobs = async (req, res) => {
 
 #### Page and Limit
 
+✅✅✅✅✅✅
+
 ```js
 jobsController.js;
 
@@ -4684,6 +4690,8 @@ const getAllJobs = async (req, res) => {
 ```
 
 #### Total Jobs and Number Of Pages
+
+✅✅✅✅✅✅
 
 ```js
 jobsController.js;
@@ -4735,6 +4743,8 @@ const getAllJobs = async (req, res) => {
 
 #### PageBtnContainer Setup
 
+✅✅✅✅✅✅
+
 -  PageBtnContainer.js
 
 ```js
@@ -4760,6 +4770,8 @@ return (
 ```
 
 #### PageBtnContainer - Structure
+
+✅✅✅✅✅✅
 
 ```js
 PageBtnContainer.js;
@@ -4800,6 +4812,8 @@ export default PageButtonContainer;
 
 #### Button Container
 
+✅✅✅✅✅✅
+
 -  [Array.from] (https://youtu.be/zg1Bv4xubwo)
 
 ```js
@@ -4827,7 +4841,7 @@ return (
 );
 ```
 
-#### Change Page
+#### Change Page ✅✅✅✅✅✅
 
 ```js
 actions.js;

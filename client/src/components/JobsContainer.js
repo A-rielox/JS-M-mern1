@@ -2,6 +2,7 @@ import { useAppContext } from '../context/appContext';
 import { useEffect } from 'react';
 import Loading from './Loading';
 import Job from './Job';
+import PageBtnContainer from './PageBtnContainer';
 import styled from 'styled-components';
 
 const JobsContainer = () => {
@@ -15,6 +16,7 @@ const JobsContainer = () => {
       searchStatus,
       searchType,
       sort,
+      numOfPages,
    } = useAppContext();
 
    useEffect(() => {
@@ -43,6 +45,7 @@ const JobsContainer = () => {
                return <Job key={job._id} {...job} />;
             })}
          </div>
+         {numOfPages > 1 && <PageBtnContainer />}
       </Wrapper>
    );
 };
