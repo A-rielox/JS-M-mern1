@@ -36,8 +36,46 @@ const deleteJob = async (req, res) => {
    res.status(StatusCodes.OK).json({ msg: 'Success! Job removed' });
 };
 
+// al no poner el await se obtiene solo el query ( en este caso en la variable result ) , al q despues se le puede agregar los sort'ssss
+// cuando se ponga 'all' lo q quiero es q no se filtre en relación a ese, xeso para ese no se va a poner en el queryObject. ( al poner 'all' lo q hace es NO buscar con ese filtro )
+//status, type y sort SIEMPRE tienen algo x default, NO pueden estar vacios
+// si no fueran a estar presentes podria poner el if de la sig forma:
+//if ( status && status !== 'all') {...
+// para q se agrege solo si no es undefined
 const getAllJobs = async (req, res) => {
-   const jobs = await Job.find({ createdBy: req.user.userId });
+   const { search, status, jobType, sort } = req.query;
+
+   const queryObject = { createdBy: req.user.userId };
+
+   if (status && status !== 'all') {
+      queryObject.status = status;
+   }
+   if (jobType && jobType !== 'all') {
+      queryObject.jobType = jobType;
+   }
+   if (search) {
+      queryObject.position = { $regex: search, $options: 'i' };
+   }
+
+   // SIN AWAIT
+   let result = Job.find(queryObject);
+
+   // lo saco de query.prototype.sort() de mongoose
+   // chain sort conditions
+   if (sort === 'latest') {
+      result = result.sort('-createdAt');
+   }
+   if (sort === 'oldest') {
+      result = result.sort('createdAt');
+   }
+   if (sort === 'a-z') {
+      result = result.sort('position');
+   }
+   if (sort === 'z-a') {
+      result = result.sort('-position');
+   }
+
+   const jobs = await result;
 
    res.status(StatusCodes.OK).json({
       totalJobs: jobs.length,
