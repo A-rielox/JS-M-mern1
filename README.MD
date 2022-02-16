@@ -3998,7 +3998,7 @@ function StatItem({ count, title, icon, color, bcg }) {
 export default StatItem;
 ```
 
-#### Aggregate Jobs Based on Year and Month✅✅✅✅✅✅
+#### Aggregate Jobs Based on Year and Month
 
 ```js
 jobsController.js;
@@ -4024,6 +4024,8 @@ let monthlyApplications = await Job.aggregate([
 ```
 
 #### Refactor Data
+
+✅✅✅
 
 -  install moment.js on the SERVER
 
@@ -4055,6 +4057,8 @@ monthlyApplications = monthlyApplications
 
 #### Charts Container
 
+✅✅✅
+
 -  BarChart.js
 -  AreaChart.js
 
@@ -4085,6 +4089,8 @@ export default function ChartsContainer() {
 ```
 
 #### Recharts Library
+
+✅✅✅
 
 -  install in the Client!!!
 
@@ -4131,6 +4137,8 @@ const BarChartComponent = ({ data }) => {
 
 #### Area Chart
 
+✅✅✅
+
 ```js
 import {
    ResponsiveContainer,
@@ -4169,7 +4177,7 @@ const AreaChartComponent = ({ data }) => {
 
 #### Filter
 
-#### Get All Jobs - Initial Setup
+#### Get All Jobs - Initial Setup✅✅✅✅✅✅
 
 ```js
 jobsController.js;
