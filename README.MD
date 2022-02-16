@@ -4841,7 +4841,9 @@ return (
 );
 ```
 
-#### Change Page ✅✅✅✅✅✅
+#### Change Page
+
+✅✅✅✅✅✅
 
 ```js
 actions.js;
@@ -4882,6 +4884,8 @@ return (
 
 #### Prev and Next Buttons
 
+✅✅✅✅✅✅
+
 ```js
 PageBtnContainer.js;
 const prevPage = () => {
@@ -4905,6 +4909,8 @@ const nextPage = () => {
 ```
 
 #### Trigger New Page
+
+✅✅✅✅✅✅
 
 ```js
 appContext.js;
@@ -4936,7 +4942,7 @@ if (action.type === HANDLE_CHANGE) {
 }
 ```
 
-#### Production Setup - Fix Warnings and logoutUser
+#### Production Setup - Fix Warnings and logoutUser✅✅✅✅✅✅
 
 -  getJobs,deleteJob,showStats - invoke logoutUser()
 -  fix warnings

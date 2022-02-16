@@ -30,6 +30,7 @@ import {
    SHOW_STATS_BEGIN,
    SHOW_STATS_SUCCESS,
    CLEAR_FILTERS,
+   CHANGE_PAGE,
 } from './actions';
 
 const token = localStorage.getItem('token');
@@ -261,9 +262,9 @@ const AppProvider = ({ children }) => {
 
    // los q estan en url es xq siempre tienen un valor x defecto, el search es opcional xlo q puede ser undefined
    const getJobs = async () => {
-      const { search, searchStatus, searchType, sort } = state;
+      const { search, searchStatus, searchType, sort, page } = state;
 
-      let url = `/jobs?status=${searchStatus}&jobType=${searchType}&sort=${sort}`;
+      let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`;
 
       if (search) {
          url = url + `&search=${search}`;
@@ -282,9 +283,9 @@ const AppProvider = ({ children }) => {
 
          console.log(jobs);
       } catch (error) {
-         console.log(error.response);
+         // console.log(error.response);
          //logout xq los unicos error q se pueden obtener aqui son 401 y 500, no autorizado o error de servidor
-         // logoutUser();
+         logoutUser();
       }
       clearAlert();
    };
@@ -330,8 +331,8 @@ const AppProvider = ({ children }) => {
          await authFetch.delete(`/jobs/${jobId}`);
          getJobs();
       } catch (error) {
-         console.log(error.response);
-         // logoutUser();
+         // console.log(error.response);
+         logoutUser();
       }
    };
 
@@ -349,8 +350,8 @@ const AppProvider = ({ children }) => {
             },
          });
       } catch (error) {
-         console.log(error.response);
-         // logoutUser()
+         // console.log(error.response);
+         logoutUser();
       }
 
       clearAlert();
@@ -358,6 +359,10 @@ const AppProvider = ({ children }) => {
 
    const clearFilters = () => {
       dispatch({ type: CLEAR_FILTERS });
+   };
+
+   const changePage = page => {
+      dispatch({ type: CHANGE_PAGE, payload: { page } });
    };
 
    return (
@@ -379,6 +384,7 @@ const AppProvider = ({ children }) => {
             editJob,
             showStats,
             clearFilters,
+            changePage,
          }}
       >
          {children}

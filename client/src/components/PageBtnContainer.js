@@ -3,14 +3,26 @@ import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi';
 import styled from 'styled-components';
 
 const PageBtnContainer = () => {
-   const { numOfPages, page } = useAppContext();
+   const { numOfPages, page, changePage } = useAppContext();
 
    const prevPage = () => {
-      console.log('prev page');
+      let newPage = page - 1;
+      if (newPage < 1) {
+         newPage = numOfPages;
+      }
+      changePage(newPage);
+      console.log(newPage);
    };
 
    const nextPage = () => {
-      console.log('next page');
+      let newPage = page + 1;
+      if (newPage > numOfPages) {
+         // newPage = numOfPages
+         // alternative
+         newPage = 1;
+      }
+      changePage(newPage);
+      console.log(newPage);
    };
 
    const pages = Array.from({ length: numOfPages }, (_, index) => {
@@ -33,7 +45,7 @@ const PageBtnContainer = () => {
                         pageNumber === page ? 'pageBtn active' : 'pageBtn'
                      }
                      key={pageNumber}
-                     onClick={() => console.log(pageNumber)}
+                     onClick={() => changePage(pageNumber)}
                   >
                      {pageNumber}
                   </button>
