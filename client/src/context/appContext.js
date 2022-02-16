@@ -29,6 +29,7 @@ import {
    EDIT_JOB_ERROR,
    SHOW_STATS_BEGIN,
    SHOW_STATS_SUCCESS,
+   CLEAR_FILTERS,
 } from './actions';
 
 const token = localStorage.getItem('token');
@@ -258,8 +259,15 @@ const AppProvider = ({ children }) => {
       clearAlert();
    };
 
+   // los q estan en url es xq siempre tienen un valor x defecto, el search es opcional xlo q puede ser undefined
    const getJobs = async () => {
-      let url = `/jobs`;
+      const { search, searchStatus, searchType, sort } = state;
+
+      let url = `/jobs?status=${searchStatus}&jobType=${searchType}&sort=${sort}`;
+
+      if (search) {
+         url = url + `&search=${search}`;
+      }
 
       dispatch({ type: GET_JOBS_BEGIN });
 
@@ -349,7 +357,7 @@ const AppProvider = ({ children }) => {
    };
 
    const clearFilters = () => {
-      console.log('clear filters');
+      dispatch({ type: CLEAR_FILTERS });
    };
 
    return (

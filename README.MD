@@ -4412,7 +4412,9 @@ const SearchContainer = () => {
 export default SearchContainer;
 ```
 
-#### Search Container - Complete✅✅✅✅✅✅
+#### Search Container - Complete
+
+✅✅✅✅✅✅
 
 ```js
 SearchContainer.js;
@@ -4498,6 +4500,8 @@ export default SearchContainer;
 
 #### Clear Filters
 
+✅✅✅✅✅✅
+
 ```js
 actions.js;
 
@@ -4526,7 +4530,7 @@ if (action.type === CLEAR_FILTERS) {
 }
 ```
 
-#### Refactor Get All Jobs
+#### Refactor Get All Jobs✅✅✅✅✅✅
 
 ```js
 const getJobs = async () => {
