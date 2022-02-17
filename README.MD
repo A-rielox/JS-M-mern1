@@ -4942,7 +4942,9 @@ if (action.type === HANDLE_CHANGE) {
 }
 ```
 
-#### Production Setup - Fix Warnings and logoutUser✅✅✅✅✅✅
+#### Production Setup - Fix Warnings and logoutUser
+
+✅✅✅✅✅✅
 
 -  getJobs,deleteJob,showStats - invoke logoutUser()
 -  fix warnings
@@ -4951,7 +4953,7 @@ if (action.type === HANDLE_CHANGE) {
 // eslint-disable-next-line
 ```
 
-#### Production Setup - Build Front-End Application
+#### Production Setup - Build Front-End Application✅✅✅✅✅✅
 
 -  create front-end production application
 

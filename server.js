@@ -5,6 +5,14 @@ dotenv.config();
 import 'express-async-errors';
 import morgan from 'morgan';
 
+//===== POST BUILD
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import helmet from 'helmet';
+import xss from 'xss-clean';
+import mongoSanitize from 'express-mongo-sanitize';
+
 // ===== DB
 import connectDB from './db/connect.js';
 
@@ -20,18 +28,24 @@ import authenticateUser from './middleware/auth.js';
 if (process.env.NODE_ENV !== 'production') {
    app.use(morgan('dev'));
 }
+
+const __dirname = dirname(fileURLToPath(import.meta.url)); // POST BUILD
+app.use(express.static(path.resolve(__dirname, './client/build'))); // POST BUILD
 app.use(express.json()); // para req.body
 
+app.use(express.json()); // POST BUILD
+app.use(helmet()); // POST BUILD
+app.use(xss()); // POST BUILD
+app.use(mongoSanitize()); // POST BUILD
+
 // ===== routes
-app.get('/', (req, res) => {
-   res.json({ msg: 'Holi hola' });
-});
-app.get('/api/v1', (req, res) => {
-   res.json({ msg: 'Holi hola desde API' });
-});
 
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/jobs', authenticateUser, jobsRouter);
+
+app.get('*', function (request, response) {
+   response.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
+}); // POST BUILD
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
